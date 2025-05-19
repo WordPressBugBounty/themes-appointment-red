@@ -135,3 +135,7 @@ blockquote {border-left: 5px solid #db2723;}
 .related-post-image{border-bottom: 2px solid #db2723;}
 .sidebar-widget h1:before,.sidebar-widget h2:before,.sidebar-widget h3:before,.sidebar-widget h4:before,.sidebar-widget h5:before,.sidebar-widget h6:before,.sidebar-widget .wp-block-search .wp-block-search__label:before,
 .footer-widget-section h1:before,.footer-widget-section h2:before,.footer-widget-section h3:before,.footer-widget-section h4:before,.footer-widget-section h5:before,.footer-widget-section h6:before,.footer-widget-section .wp-block-search .wp-block-search__label:before,h3.footer-widget-title:before{width: 60px;background: #db2723;z-index:2;}
+body.wp-child-theme-appointment-red .search-form input[type="submit"] {
+    background-color: #db2723;
+    border: 1px solid #db2723;
+}

@@ -84,11 +84,40 @@
                 </div>
 
                 <?php
+                if ($appointment_red_header_settings['appointment_search_enable'] == 0 || $appointment_red_header_settings['appointment_search_enable'] == '') {
+                $appointment_red_search_icon = '';
+                $appointment_red_search_icon.= '<div class="search-bar">
+                    <div class="search-box-outer">
+                      <div class="dropdown">
+                        <a href="#" title="'.esc_attr__('Search','appointment-red').'" class="menu-item search-icon dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                         <i class="fa fa-search"></i>
+                         <span class="sub-arrow"></span>
+                        </a>
+                        <ul class="dropdown-menu pull-right search-panel" role="group" aria-hidden="true" aria-expanded="false">
+                          <li class="dropdown-item panel-outer">
+                            <div class="form-container">
+                                <form method="get" autocomplete="off" class="search-form" action="' . esc_url(home_url('/')) . '">
+                                    <label>
+                                      <input type="search" class="menu-item search-field" placeholder="'.esc_attr__('Search …','appointment-red').'" value="" name="s">
+                                    </label>
+                                    <input type="submit" class="menu-item search-submit header-toggle-search" value="'.esc_attr__('Search','appointment-red').'">
+                                </form>                   
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>';
+                }
+
                 $appointment_red_facebook = $appointment_red_header_settings['social_media_facebook_link'];
                 $appointment_red_twitter = $appointment_red_header_settings['social_media_twitter_link'];
                 $appointment_red_linkdin = $appointment_red_header_settings['social_media_linkedin_link'];
 
                 $appointment_red_social = '<ul id="%1$s" class="%2$s">%3$s';
+                if ($appointment_red_header_settings['appointment_search_enable'] == 0 || $appointment_red_header_settings['appointment_search_enable'] == '') {
+                    $appointment_red_social.= '<li><div class="ap header-module">' . $appointment_red_search_icon . '</li>';
+                    }
                 if ($appointment_red_header_settings['header_social_media_enabled'] == 0) {
 
                     if($appointment_red_facebook !='' || $appointment_red_twitter !='' || $appointment_red_linkdin !=''){
