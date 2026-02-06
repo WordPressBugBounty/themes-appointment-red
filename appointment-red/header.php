@@ -20,9 +20,9 @@
         <?php
         $appointment_red_header_setting = wp_parse_args(get_option('appointment_options', array()), appointment_red_default_data());
         if ($appointment_red_header_setting['header_layout_setting'] == 'default') {
-            $appointment_red_navbarstyle = 'navbar navbar-default';
+            $appointment_red_navbarstyle = 'navbar navbar-default navbar-expand-lg';
         } elseif ($appointment_red_header_setting['header_layout_setting'] == 'sticky') {
-            $appointment_red_navbarstyle = 'navbar navbar2 navbar-default navbar2';
+            $appointment_red_navbarstyle = 'navbar navbar2 navbar-default navbar2 navbar-expand-lg';
         }
         ?>
         <nav class="<?php echo esc_attr($appointment_red_navbarstyle); ?>">
@@ -75,12 +75,9 @@
                             <p class="site-description"><?php echo $appointment_red_description; ?></p>
                         <?php endif; ?>
                     </div>
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only"><?php esc_html_e('Toggle navigation', 'appointment-red'); ?></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                       <span class="navbar-toggler-icon"></span>
+                     </button>
                 </div>
 
                 <?php
@@ -156,7 +153,7 @@
                     wp_nav_menu(array(
                         'theme_location' => 'primary',
                         'container' => '',
-                        'menu_class' => 'nav navbar-nav navbar-right',
+                        'menu_class' => 'nav navbar-nav ms-auto',
                         'fallback_cb' => 'appointment_fallback_page_menu',
                         'items_wrap' => $appointment_red_social,
                         'walker' => new appointment_nav_walker()

@@ -35,12 +35,12 @@ Text Domain: appointment-red
     background-color: #888;
 }
 @media (min-width:992px ) {
-	.navbar2.navbar-default .navbar-nav > li > a { color: #ffffff; }
-	.navbar2 .cart-header > a.cart-icon ,.navbar2 .search-box-outer a  {
+  .navbar2.navbar-default .navbar-nav > li > a { color: #ffffff; }
+  .navbar2 .cart-header > a.cart-icon ,.navbar2 .search-box-outer a  {
       color: #ffffff;
     }
     .navbar2 .cart-header {
-      border-left: 1px solid #ffffff;
+      border-right: 1px solid #ffffff;
     }
 }
 @media (max-width: 991px) {
@@ -110,7 +110,7 @@ Text Domain: appointment-red
     text-align: center;
 }
 .service-section3 .service-icon{
-	position: relative;
+  position: relative;
     text-align: center;
     margin: 0 auto 25px;
     float: none;
@@ -177,7 +177,7 @@ Text Domain: appointment-red
     font-size: 14px;
     font-weight: bold;
     height: auto;
-    left: 5px;
+    right: 5px;
     line-height: normal;
     padding: 15px 23px 14px;
     text-decoration: none;
