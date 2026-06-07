@@ -3,8 +3,8 @@
 Contributors: priyanshumittal
 Tags: full-width-template, threaded-comments, two-columns, right-sidebar, left-sidebar, sticky-post, custom-menu, translation-ready, blog, footer-widgets, featured-images
 Requires at least: 4.5
-Tested up to: 6.8
-Stable tag: 1.4
+Tested up to: 6.9
+Stable tag: 1.4.1
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -43,6 +43,8 @@ Appointment Red WordPress Theme is distributed under the terms of the GNU GPL
 
 == Changelog ==
 
+= 1.4.1 =
+1. fixed minor issues.
 @version 1.4
 1. Updated bootstrap 5.3.6.
 2. Added rtl language support.
